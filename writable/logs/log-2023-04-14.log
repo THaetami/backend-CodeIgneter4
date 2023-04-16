@@ -1,0 +1,154 @@
+ERROR - 2023-04-14 06:07:26 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'codeigneter', 3306, '', 0)
+#1 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\Users\ABC\Desktop\submission\auth-login\app\Controllers\Login.php(25): CodeIgniter\BaseModel->first()
+#7 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Login->index()
+#8 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ABC\Desktop\submission\auth-login\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\De...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\Users\ABC\Desktop\submission\auth-login\app\Controllers\Login.php(25): CodeIgniter\BaseModel->first()
+#6 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Login->index()
+#7 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ABC\Desktop\submission\auth-login\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\De...')
+#11 {main}
+CRITICAL - 2023-04-14 06:07:26 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(25): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Desktop\\submission\\auth-login\\public\\index.php')
+CRITICAL - 2023-04-14 06:46:01 --> "cors" filter must have a matching alias defined.
+in SYSTEMPATH\Filters\Filters.php on line 340.
+ 1 SYSTEMPATH\Filters\Filters.php(340): CodeIgniter\Filters\Exceptions\FilterException::forNoAlias('cors')
+ 2 SYSTEMPATH\CodeIgniter.php(466): CodeIgniter\Filters\Filters->enableFilter('cors', 'before')
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Desktop\\submission\\auth-login\\public\\index.php')
+CRITICAL - 2023-04-14 07:09:12 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #1 ($blank) must be of type ?string, array given, called in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Validation\Validation.php on line 312
+in SYSTEMPATH\Validation\FileRules.php on line 51.
+ 1 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\FileRules->uploaded([], 'profile', [...], null, 'profile')
+ 2 SYSTEMPATH\Validation\Validation.php(158): CodeIgniter\Validation\Validation->processRules('profile', 'profile', [], [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Register.php(60): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Register->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Desktop\\submission\\auth-login\\public\\index.php')
+CRITICAL - 2023-04-14 07:10:23 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #1 ($blank) must be of type ?string, array given, called in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Validation\Validation.php on line 312
+in SYSTEMPATH\Validation\FileRules.php on line 51.
+ 1 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\FileRules->uploaded([], 'profile', [...], null, 'profile')
+ 2 SYSTEMPATH\Validation\Validation.php(158): CodeIgniter\Validation\Validation->processRules('profile', 'profile', [], [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Register.php(60): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Register->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Desktop\\submission\\auth-login\\public\\index.php')
+CRITICAL - 2023-04-14 07:12:19 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #1 ($blank) must be of type ?string, array given, called in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Validation\Validation.php on line 312
+in SYSTEMPATH\Validation\FileRules.php on line 51.
+ 1 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\FileRules->uploaded([], 'profile', [...], null, 'profile')
+ 2 SYSTEMPATH\Validation\Validation.php(158): CodeIgniter\Validation\Validation->processRules('profile', 'profile', [], [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Register.php(60): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Register->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Desktop\\submission\\auth-login\\public\\index.php')
+CRITICAL - 2023-04-14 07:13:52 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #1 ($blank) must be of type ?string, array given, called in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Validation\Validation.php on line 312
+in SYSTEMPATH\Validation\FileRules.php on line 51.
+ 1 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\FileRules->uploaded([], 'profile', [...], null, 'profile')
+ 2 SYSTEMPATH\Validation\Validation.php(158): CodeIgniter\Validation\Validation->processRules('profile', 'profile', [], [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Register.php(60): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Register->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Desktop\\submission\\auth-login\\public\\index.php')
+CRITICAL - 2023-04-14 07:14:16 --> CodeIgniter\Validation\FileRules::uploaded(): Argument #1 ($blank) must be of type ?string, array given, called in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Validation\Validation.php on line 312
+in SYSTEMPATH\Validation\FileRules.php on line 51.
+ 1 SYSTEMPATH\Validation\Validation.php(312): CodeIgniter\Validation\FileRules->uploaded([], 'profile', [...], null, 'profile')
+ 2 SYSTEMPATH\Validation\Validation.php(158): CodeIgniter\Validation\Validation->processRules('profile', 'profile', [], [...], [...])
+ 3 SYSTEMPATH\Controller.php(140): CodeIgniter\Validation\Validation->run()
+ 4 APPPATH\Controllers\Register.php(60): CodeIgniter\Controller->validate([...])
+ 5 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Register->index()
+ 6 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Register))
+ 7 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Desktop\\submission\\auth-login\\public\\index.php')
+ERROR - 2023-04-14 13:29:48 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', '', 'codeigneter', 3306, '', 0)
+#1 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\Users\ABC\Desktop\submission\auth-login\app\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+#7 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Login->index()
+#8 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#9 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\Users\ABC\Desktop\submission\auth-login\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\De...')
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\Users\ABC\Desktop\submission\auth-login\app\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+#6 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Login->index()
+#7 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+#8 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\Users\ABC\Desktop\submission\auth-login\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\Users\ABC\Desktop\submission\auth-login\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\De...')
+#11 {main}
+CRITICAL - 2023-04-14 13:29:48 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `users`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Controllers\Login.php(28): CodeIgniter\BaseModel->first()
+ 6 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Login->index()
+ 7 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 8 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Desktop\\submission\\auth-login\\public\\index.php')

@@ -1,0 +1,21 @@
+CRITICAL - 2023-04-16 07:03:48 --> Too few arguments to function App\Controllers\User::__construct(), 0 passed in C:\Users\ABC\Documents\aplication\submission-perusahaan\back-end\vendor\codeigniter4\framework\system\CodeIgniter.php on line 906 and exactly 1 expected
+in APPPATH\Controllers\User.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\User->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Documents\\aplication\\submission-perusahaan\\back-end\\public\\index.php')
+CRITICAL - 2023-04-16 07:04:13 --> Too few arguments to function App\Controllers\User::__construct(), 0 passed in C:\Users\ABC\Documents\aplication\submission-perusahaan\back-end\vendor\codeigniter4\framework\system\CodeIgniter.php on line 906 and exactly 1 expected
+in APPPATH\Controllers\User.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\User->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Documents\\aplication\\submission-perusahaan\\back-end\\public\\index.php')
+CRITICAL - 2023-04-16 07:04:39 --> Too few arguments to function App\Controllers\User::__construct(), 0 passed in C:\Users\ABC\Documents\aplication\submission-perusahaan\back-end\vendor\codeigniter4\framework\system\CodeIgniter.php on line 906 and exactly 1 expected
+in APPPATH\Controllers\User.php on line 15.
+ 1 SYSTEMPATH\CodeIgniter.php(906): App\Controllers\User->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(490): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('C:\\Users\\ABC\\Documents\\aplication\\submission-perusahaan\\back-end\\public\\index.php')
